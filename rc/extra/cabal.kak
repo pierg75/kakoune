@@ -45,7 +45,7 @@ def -hidden cabal-indent-on-new-line %[
 def -hidden cabal-indent-on-opening-curly-brace %[
     eval -draft -itersel %[
         # align indent with opening paren when { is entered on a new line after the closing paren
-        try %[ exec -draft h <a-F> ) M <a-k> \A\(.*\)\h*\n\h*\{\z <ret> s \A|.\Z <ret> 1<a-&> ]
+        try %[ exec -draft h <a-F> ) M <a-k> \A\(.*\)\h*\n\h*\{\z <ret> s \A|.\z <ret> 1<a-&> ]
     ]
 ]
 

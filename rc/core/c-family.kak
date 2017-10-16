@@ -61,7 +61,7 @@ def -hidden c-family-indent-on-newline %< eval -draft -itersel %<
 
 def -hidden c-family-indent-on-opening-curly-brace %[
     # align indent with opening paren when { is entered on a new line after the closing paren
-    try %[ exec -draft -itersel h<a-F>)M <a-k> \A\(.*\)\h*\n\h*\{\z <ret> s \A|.\Z <ret> 1<a-&> ]
+    try %[ exec -draft -itersel h<a-F>)M <a-k> \A\(.*\)\h*\n\h*\{\z <ret> s \A|.\z <ret> 1<a-&> ]
 ]
 
 def -hidden c-family-indent-on-closing-curly-brace %[

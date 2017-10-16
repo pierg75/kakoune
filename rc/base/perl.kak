@@ -79,13 +79,13 @@ def -hidden perl-indent-on-new-line %~
         # cleanup trailing white spaces on the previous line
         try %{ exec -draft k<a-x> s \h+$ <ret>d }
         # align to opening paren of previous line
-        try %{ exec -draft [( <a-k> \A\([^\n]+\n[^\n]*\n?\z <ret> s \A\(\h*.|.\Z <ret> '<a-;>' & }
+        try %{ exec -draft [( <a-k> \A\([^\n]+\n[^\n]*\n?\z <ret> s \A\(\h*.|.\z <ret> '<a-;>' & }
         # copy // comments prefix
         try %{ exec -draft \;<c-s>k<a-x> s ^\h*\K/{2,} <ret> y<c-o><c-o>P<esc> }
         # indent after a switch's case/default statements
         try %[ exec -draft k<a-x> <a-k> ^\h*(case|default).*:$ <ret> j<a-gt> ]
         # indent after if|else|while|for
-        try %[ exec -draft \;<a-F>)MB <a-k> \A(if|else|while|for)\h*\(.*\)\h*\n\h*\n?\z <ret> s \A|.\Z <ret> 1<a-&>1<a-space><a-gt> ]
+        try %[ exec -draft \;<a-F>)MB <a-k> \A(if|else|while|for)\h*\(.*\)\h*\n\h*\n?\z <ret> s \A|.\z <ret> 1<a-&>1<a-space><a-gt> ]
     =
 ~
 
